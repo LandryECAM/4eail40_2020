@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"../../model"
 )
 
 func main() {
@@ -31,7 +33,11 @@ func runCommand(commandStr string) (e error) {
 	// add another case here for custom commands.
 	case "new":
 		// TODO Create a new game on a classic 8x8 board.
+		myBoard := model.Board8x8{}
+		myBoard.Initialize()
+		// fmt.Println(myBoard)
 		// TODO Display the board on console.
+		fmt.Print(myBoard.String())
 		break
 	case "move":
 		// TODO Move a piece. (syntax: move <from> <to>)
