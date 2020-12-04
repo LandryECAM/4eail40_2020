@@ -4,8 +4,8 @@ package piece
 import (
 	"fmt"
 
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/coord"
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/player"
+	"../coord"
+	"../player"
 )
 
 // Piece represents a game piece
@@ -15,4 +15,6 @@ type Piece interface {
 	Color() player.Color
 	// Moves returns a set of valid move.
 	Moves(isCapture bool) map[coord.ChessCoordinates]bool
+	// Returns the name of the piece.
+	Name() string
 }

@@ -3,7 +3,7 @@ package board
 import (
 	"testing"
 
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/coord"
+	"../coord"
 )
 
 type mockCoord int
@@ -32,7 +32,7 @@ func TestClassic_MovePiece(t *testing.T) {
 			"testmock",
 			&Classic{},
 			args{mockCoord(0), mockCoord(1)},
-			true,
+			false,
 		},
 	}
 	for _, tt := range tests {
